@@ -55,7 +55,7 @@ FROM
 
 #Display the total amount rung up by each staff member in August of 2005.
 SELECT 
-    first_name, last_name, SUM(amount) AS total_amount
+    CONCAT(first_name, ' ', last_name) AS staff_member, SUM(amount) AS total_amount
 FROM
     staff
         INNER JOIN
